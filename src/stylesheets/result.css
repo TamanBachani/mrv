@@ -1,0 +1,239 @@
+.viz{
+  width: 100%;
+  display: flex;
+  padding: 6rem 4rem;
+  padding-bottom: 2rem;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+.main-text{
+  font-family: "satoshi";
+  font-weight: 900;
+  font-size: 5rem;
+  width: 12ch;
+  text-align: right;
+  line-height: 5.3rem;
+}
+
+.fa-circle{
+  margin-right: 1rem;
+}
+
+.main-text > span{
+    background: linear-gradient( to right, #06963f, #9cb800, #b56c00, #a60000 );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.result-nav{
+  display: flex;
+  padding: 1rem 2rem;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px black solid;
+}
+
+.result-nav-link{
+  font-family: "satoshi";
+  font-weight: 700;
+  transition: all 700ms ease;
+  letter-spacing: 2px
+}
+
+.result-nav-link > a{
+  color: black !important;
+  text-decoration: none !important;
+}
+
+.result-nav-link >a:hover, .print:hover{
+  color: rgba(0, 0, 0, 0.6) !important;
+  text-decoration: underline !important;
+  cursor: pointer !important;
+}
+
+.fa-reply{
+  margin-right: 0.5rem;
+}
+.fa-share{
+  margin-left: 0.5rem;
+}
+
+
+.rv-xy-plot__axis__title text {
+    font-weight: 500 !important;
+    fill: #000000 !important;
+    font-size: 11px !important;
+    font-family: 'Satoshi' !important;
+    letter-spacing: 1.3px !important;
+}
+
+.rv-xy-plot__axis__tick__text {
+    fill: #000000 !important;
+    font-size: 13px !important;
+    font-family: 'Satoshi' !important;
+    font-weight: 500 !important;
+    letter-spacing: 1.1px !important;
+}
+
+
+.insights-box{
+  border: 3px solid black;
+  border-radius: 30px;
+  box-shadow: 0px 0px 20px -4px grey;
+  padding: 4.5rem;
+  width: 85%;
+  margin: 4rem auto;
+  margin-top: 2rem;
+}
+
+.range-value{
+  /* text-transform: lowercase; */
+  font-weight: 900;
+}
+
+.green{
+  color: green;
+}
+
+.orange{
+  color: orange;
+}
+
+.red{
+  color: red;
+}
+
+.range-text{
+  line-height: 2.5rem;
+}
+
+.fact{
+  background-color: black;
+  color: white;
+  padding: 0.6rem 1rem;
+  font-family: 'satoshi';
+  font-weight: 900;
+  letter-spacing: 5px;
+  position: relative;
+  overflow: hidden !important;
+  transition: all .2s ease;
+  width: fit-content;
+}
+
+.fact:after{
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255,255,255,0.5) 50%, rgba(229, 172, 142, 0));
+  transform: rotateZ(60deg) translate(-5em, 7.5em);
+  animation: fact 2.5s forwards infinite;
+}
+
+@keyframes fact {
+  100% {
+    transform: rotateZ(60deg) translate(1em, -9em);
+  }
+}
+
+.space-div{
+  margin-bottom: 1.5rem;
+}
+
+.projection{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+.proj-text{
+  width: 50%;
+  line-height: 3.75rem;
+  font-weight: 700;
+  font-size: 2.3rem;
+  justify-self: flex-start;
+}
+
+.inside-insight{
+  padding: 1.5rem 0;
+}
+
+.rv-radial-chart .rv-xy-plot__series--label {
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    pointer-events: none;
+}
+
+.source > a{
+  text-decoration: none;
+  color: grey;
+    font-family: 'satoshi';
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.source:hover > a{
+  color: #000000;
+  text-decoration: underline;
+}
+
+.source{
+  font-size: 0.8rem;
+}
+
+.proj-chart{
+  position: relative;
+}
+
+.diabetic-pie{
+  position: absolute;
+  top: -8px;
+  right: 13px;
+  letter-spacing: 3px;
+  font-family: 'satoshi';
+  font-weight: 900;
+}
+
+.patient-info{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  background-color: rgba(7, 7, 7, 0.356);
+}
+
+.info-elements{
+    color: white;
+    font-family: 'satoshi';
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 1180px) {
+  .viz{
+    flex-direction: column;
+  }
+  .main-text{
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .projection{
+    flex-direction: column-reverse;
+  }
+  .proj-text{
+    width: 100%;
+    text-align: center;
+  } 
+}
