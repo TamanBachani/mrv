@@ -2,6 +2,9 @@ import { useState, useContext } from "react";
 import DetailsContext from "./DetailsContext";
 import LoadingContext from "../loading/LoadingContext";
 
+const API_URL = "https://mrv-server.onrender.com";
+
+
 const DetailsState = (props) => {
   const { setLoading } = useContext(LoadingContext);
   const [enteredDetails, setEnteredDetails] = useState({
@@ -44,7 +47,7 @@ const toTitleCase = (str) =>
 
     try {
       // sending request to the server
-      const response = await fetch("http://localhost:5000/extract", {
+      const response = await fetch(`${API_URL}/extract`, {
         method: "POST",
         body: data,
       });
@@ -86,7 +89,7 @@ const toTitleCase = (str) =>
       data.append("report", file);
   
       // Send the file to the backend
-      const uploadResponse = await fetch("http://localhost:5000/extract", {
+      const uploadResponse = await fetch(`${API_URL}/extract`, {
         method: "POST",
         body: data,
       });
